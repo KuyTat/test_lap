@@ -1,6 +1,9 @@
-.txt{
-  color:blue;
-  font-family: "AKbalthom DaemPothi";
+.txt {
+  color: blue;
+  font-family: 'AKbalthom DaemPothi';
   font-weight: bold;
-
+}
+.img_st {
+  width: 200px;
+  border-radius: 10px;
 }

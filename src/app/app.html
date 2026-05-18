@@ -63,26 +63,16 @@
           <div class="carousel-item active">
             <img
               src="{{ profile }}"
-              style="width: 100%; height: 400px; object-fit: cover"
+              style="width: 100%; object-fit: cover"
               class="d-block w-100"
               alt="..."
             />
           </div>
           <div class="carousel-item">
-            <img
-              src="{{ profile2 }}"
-              style="height: 400px; object-fit: cover"
-              class="d-block w-100"
-              alt="..."
-            />
+            <img src="{{ profile2 }}" style="object-fit: cover" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item">
-            <img
-              src="{{ profile }}"
-              style="height: 400px; object-fit: cover"
-              class="d-block w-100"
-              alt="..."
-            />
+            <img src="{{ profile }}" style="object-fit: cover" class="d-block w-100" alt="..." />
           </div>
         </div>
         <button
@@ -106,8 +96,46 @@
       </div>
     </div>
   </div>
+  <hr />
+  <h3
+    style="text-decoration: underline"
+    [style]="{ color: txt_color, 'font-size': txt_size + 'px' }"
+    ]
+  >
+    SETEC
+  </h3>
+  <h2 [style]="{ color: t_yellow }">hello bro</h2>
+  <input type="button" value="click me" (click)="alert()" />
+  <input type="button" class="btn btn-danger" value="Change Color" (click)="ChangeColor()" /> &nbsp;
+  <input type="button" class="btn btn-info" value="increaseFontSize" (click)="IncreaseFontSize()" />
+  &nbsp;
+  <input type="button" class="btn btn-info" value="decreaseFontSize" (click)="DecreaseFontSize()" />
+  <hr />
+  <!-- <ul>
+    @for (item of p; track item) {
+      <li>{{ item }}</li>
+    }
+  </ul> -->
 </div>
-
+<div class="container">
+  <div class="row">
+    @for (item of productImage; track item) {
+      <div class="col-md-3">
+        <div class="card" style="width: 100%">
+          <img src="{{ item }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
 <!-- <h1 class="txt">Name: {{ name_ }}</h1>
 <h1 class="txt">Gender: {{ gender }}</h1>
 <h1 class="txt">Age: {{ age }}</h1>
